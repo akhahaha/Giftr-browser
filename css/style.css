@@ -33,6 +33,24 @@ hr{
     margin: 0 auto; 
 }
 
+.list-group-item {
+    display:inherit;
+}
+
+.list-group-item span{
+    margin-top: 12px;
+    font-size: 15px;
+}
+   
+
+.caption h5 a{
+    color: #61717e;
+}
+
+.caption h5{
+    color: #df5e3e;
+}
+
 .likes{
 	margin-top: 85px;
 }
@@ -41,17 +59,12 @@ hr{
 	background: #fff;
 	border-radius: 20px;
 	border: 1.5px solid #e28168;
-
 }
 
 .well hr{
 	border-color: #df5e3e;
 	padding-bottom: 20px;
 }
-
-
-
-
 
 .container.text-center{
 	margin-top: 10px;
@@ -299,11 +312,7 @@ button:focus {outline:0;}
 	color: #df5e3e;
 	background-color: #fff;
   	border-left: 4px solid #df5e3e !important;
-
-
 }
-
-
 
 .profile-usermenu ul li:active {
   background-color: #df5e3e !important;
