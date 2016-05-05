@@ -41,7 +41,46 @@ hr{
     margin-top: 12px;
     font-size: 15px;
 }
-   
+
+.panel-heading.success{
+	background: #58B957 !important;
+}
+
+.panel-heading.shipping{
+	background: #0072DB !important;
+}
+
+.panel-heading.processing{
+	background: #56C0E0 !important;
+}
+
+.panel-heading span{
+	color: #FFFFFF!important;
+}
+
+.panel-body{
+	text-align: left!important;
+}
+
+.panel-body img{
+	/*padding-right: 0px;*/
+	padding-left: 10px
+}
+
+.panel-body span{
+	color: #000000!important;
+	padding-left: 20px;
+}
+
+.panel-body h4{
+	/*color: #000000!important;*/
+	text-align: left !important;
+	padding-left: 20px !important;
+}
+
+.panel-footer span{
+	color: #df5e3e;
+}
 
 .caption h5 a{
     color: #61717e;
@@ -307,7 +346,6 @@ button:focus {outline:0;}
 
 }
 
-
 .profile-usermenu ul li a:hover {
 	color: #df5e3e;
 	background-color: #fff;
@@ -331,7 +369,6 @@ button:focus {outline:0;}
   background: #fff;
   min-height: 460px;
 }
-
 
 a{
 	height: 25pt;
@@ -583,8 +620,6 @@ body{
 	font-size: 10pt;
 	height: 35px;
 }
-
-
 
 .login input[type=button]:hover{
 	opacity: 0.8;
