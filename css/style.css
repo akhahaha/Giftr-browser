@@ -33,6 +33,10 @@ hr{
     margin: 0 auto; 
 }
 
+.thumbnail{
+	height: 340px !important;
+}
+
 .nav-tabs a {
 	color: #df5e3e;
 }
@@ -45,19 +49,18 @@ hr{
     margin-top: 12px;
     font-size: 15px;
 }
-
 .panel-heading.success{
-	background: #58B957 !important;
+	background: #df5e3e !important;
 }
 
 .panel-heading.shipping{
-	background: #0072DB !important;
+	background: #e28260 !important;
+	
 }
 
 .panel-heading.processing{
-	background: #56C0E0 !important;
+	background: #c2c4bd !important;
 }
-
 .panel-heading span{
 	color: #FFFFFF!important;
 }
@@ -85,6 +88,26 @@ hr{
 .panel-footer span{
 	color: #df5e3e;
 }
+
+.dropdown{
+	width: 180px; height: 50px;
+	margin: 0 auto;
+	background-image: url('../assets/plus2.svg');
+	background-size: 40px 40px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.dropdown-description{
+	display:none;
+	position: absolute;
+	z-index: 1;
+}
+
+.dropdown:hover .dropdown-description{
+	display: block;
+}
+
 
 .caption h5 a{
     color: #61717e;
