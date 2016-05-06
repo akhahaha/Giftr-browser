@@ -49,7 +49,7 @@
 						<!-- SIDEBAR USER TITLE -->
 						<div class="profile-usertitle">
 							<div class="profile-usertitle-name">
-								Welcome Back  <h1>Nathan Sun</h1>
+								Welcome Back  <h1 id="welcome"></h1>
 							</div>
 						</div>
 						<br>
@@ -92,7 +92,7 @@
 			  <ul class="list-group">
 			  	<h2>About Me</h2><h3>.......................</h3>
 			  	
-			    <li class="list-group-item"><b>Userame:</b>  <span id="username"></span></li>
+			    <li class="list-group-item"><b>Username:</b>  <span id="username"></span></li>
 			    <li class="list-group-item"><b>Gender:</b> <span id="gender"></span></li>
 			    <li class="list-group-item"><b>Location:</b> <span id="location"></span></li>
 			    <li class="list-group-item"><b>Last Active:</b><span id="active"></span></li>
@@ -128,10 +128,15 @@
 
 	<!--json parse-->
 	<script>
+		
 		var x =document.cookie;
-		alert(x);
+		var username = getCookie("username");
+
+		document.getElementById("welcome").innerHTML = username;
+
 		var xmlhttp = new XMLHttpRequest();
-		var url = "http://localhost:8080/users/1";
+		var url = "http://localhost:8080/users?username=" + username;
+		//var url = "http://localhost:8080/users/1";
 		xmlhttp.onreadystatechange = function() {
 		    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 		        var data = JSON.parse(xmlhttp.responseText);
@@ -142,19 +147,22 @@
 		xmlhttp.send();
 
 		function fillOutUserData(data) {
-			document.getElementById("username").innerHTML = data.username;
-			var gender = data.gender.id;
+			document.getElementById("username").innerHTML = data[0].username;
+			//document.getElementById("username").innerHTML = getCookie("username");
+			var gender = data[0].gender.id;
 			if (gender == 1)
 				document.getElementById("gender").innerHTML = "Male";
 			else
 				document.getElementById("gender").innerHTML = "Female";
-		   document.getElementById("active").innerHTML = data.lastActive;
-		   document.getElementById("location").innerHTML = data.location;
-		   document.getElementById("interest1").innerHTML = data.interests;
-		   document.getElementById("interest2").innerHTML = data.interests;
-		   document.getElementById("interest3").innerHTML = data.interests;
+		   document.getElementById("active").innerHTML = data[0].lastActive;
+		   //document.getElementById("location").innerHTML = data.location;
+		   document.getElementById("location").innerHTML = "Los Angeles";
+		   document.getElementById("interest1").innerHTML = data[0].interests;
+		   document.getElementById("interest2").innerHTML = "socks";
+		   document.getElementById("interest3").innerHTML = "toys";
 
 		}
+
 
 		
 

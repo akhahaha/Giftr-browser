@@ -48,7 +48,7 @@
 						<!-- SIDEBAR USER TITLE -->
 						<div class="profile-usertitle">
 							<div class="profile-usertitle-name">
-								Welcome Back  <h1>Nathan Sun</h1>
+								Welcome Back  <h1 id="welcome"></h1>
 							</div>
 						</div>
 						<br>
@@ -135,7 +135,12 @@
     
     
     <script>
-    alert(document.cookie);
+    	var x =document.cookie;
+		var username = getCookie("username");
+
+		document.getElementById("welcome").innerHTML = username;
+
+
 		var myIndex = 0;
 		carousel();
 

@@ -33,6 +33,40 @@ hr{
     margin: 0 auto; 
 }
 
+.input-group-btn{
+	margin-left: 20px;
+}
+
+.btn.btn-default{
+	margin: 0 auto;
+	border-radius: 10px !important;
+	border: 1.5px solid #e28168;
+	height: 45px !important;
+	color: #fff;
+	background-color: #e28168;
+	width: 100px;
+
+}
+.form-control.first{
+	width: 400px !important;
+	border-radius: 10px !important;
+	border: 1.5px solid #e28168;
+	height: 45px !important;
+	font-size: 15pt;
+	padding-left: 15px !important;
+	margin-left: 15px !important;
+}
+
+.form-control.first:focus{
+	width: 400px !important;
+	border-radius: 10px !important;
+	border: 3px solid #e28168;
+}
+
+.well hr{
+	border-color: #df5e3e;
+}
+
 .thumbnail{
 	height: 340px !important;
 }
@@ -111,10 +145,13 @@ hr{
 
 .caption h5 a{
     color: #61717e;
+    font-size: 12pt !important;
 }
 
 .caption h5{
     color: #df5e3e;
+    font-size: 12pt !important;
+    font-family: Roboto;
 }
 
 .likes{

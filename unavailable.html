@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html >
   <head>
+     <script src="js/clearCookie.js"></script>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <meta charset="UTF-8">
@@ -47,7 +48,7 @@
 						<!-- SIDEBAR USER TITLE -->
 						<div class="profile-usertitle">
 							<div class="profile-usertitle-name">
-								Welcome Back  <h1>Nathan Sun</h1>
+								Welcome Back  <h1 class="welcome"></h1>
 							</div>
 						</div>
 						<br>
@@ -65,7 +66,7 @@
 									 About Me </a>
 								</li>
 								<li>
-									<a href="unavailable.html">
+									<a href="history.html">
 									<img src="assets/gift_icon.svg" width="22px" alt="">
 									 Gifts </a>
 								</li>
@@ -112,6 +113,11 @@
     
     
     <script>
+    	var x =document.cookie;
+        var username = getCookie("username");
+
+        document.getElementById("welcome").innerHTML = username;
+
 		var myIndex = 0;
 		carousel();
 
