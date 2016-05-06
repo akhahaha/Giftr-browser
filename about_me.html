@@ -2,6 +2,7 @@
 <html >
   <head>
     <script src="js/jquery.js"></script>
+    <script src="js/clearCookie.js"></script>
      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <meta charset="UTF-8">
     <title>Giftr</title>
@@ -76,7 +77,7 @@
 									 Settings </a>
 								</li>
 								<li id = "sign_out">
-									<a href="index.html">
+									<a onclick='deleteCookies()' href="index.html">
 									<img src="assets/out_icon.svg" width="22px" alt="">
 									 Sign Out </a>
 								</li>
@@ -127,6 +128,8 @@
 
 	<!--json parse-->
 	<script>
+		var x =document.cookie;
+		alert(x);
 		var xmlhttp = new XMLHttpRequest();
 		var url = "http://localhost:8080/users/1";
 		xmlhttp.onreadystatechange = function() {
@@ -153,6 +156,7 @@
 
 		}
 
+		
 
 	
 	</script>

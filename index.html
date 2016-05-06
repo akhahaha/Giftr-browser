@@ -44,11 +44,11 @@
 			<img src="assets/giftrlogo.svg" width="200" height="auto"/>
 			<br>
 
-			<form class="form" method="post" action="login.php">
+			<form class="form" name="myform" method="post" action="login.php">
 				<input type="text" placeholder="username" name="user" value="Username"><br>
 				<input type="password" placeholder="password" name="password" value="Password"><<br>
-				<a href="match.html"> <input class="button"type="button" id="login" value="Log In"> </a>
-				<a href="signup.html"><input class="button" type="button" id= "register" value="Sign Up!"> </a>
+				<a href="match.html"> <input class="button"type="button" id="login" value="Log In" onclick="WriteCookie();"> </a>
+				<a href="signup.html"><input class="button" type="button" id= "register" value="Sign Up!" > </a>
 			</form>
 
 				</form>
@@ -71,6 +71,23 @@
 		    setTimeout(carousel, 1000); // Change image every 2 seconds
 		}
 	</script>
+
+	  <script type = "text/javascript">
+         <!--
+            function WriteCookie()
+            {
+            	document.cookie = "username =;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+
+               if( document.myform.user.value == "" ){
+                  alert("Enter some value!");
+                  return;
+               }
+               var cookievalue= escape(document.myform.user.value); 
+               document.cookie= "username=" + cookievalue;
+               alert(document.cookie);
+            }
+         //-->
+      </script>
     
   </body>
 </html>

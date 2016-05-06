@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html >
   <head>
+      <script src="js/clearCookie.js"></script>
     <script src="js/jquery.js"></script>
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="js/bootstrap-datepicker.js"></script>
     <link href="../css/datepicker.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
@@ -80,7 +81,7 @@
                    Settings </a>
                 </li>
                 <li id = "sign_out">
-                  <a href="index.html">
+                  <a onclick='deleteCookies()' href="index.html">
                   <img src="assets/out_icon.svg" width="22px" alt="">
                    Sign Out </a>
                 </li>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html >
   <head>
+    <script src="js/clearCookie.js"></script>
     <script src="js/jquery-1.12.3.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -75,7 +76,7 @@
                                      Settings </a>
                                 </li>
                                 <li id = "sign_out">
-                                    <a href="index.html">
+                                    <a onclick='deleteCookies()' href="index.html">
                                     <img src="assets/out_icon.svg" width="22px" alt="">
                                      Sign Out </a>
                                 </li>
