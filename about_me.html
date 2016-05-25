@@ -131,11 +131,11 @@
 		
 		var x =document.cookie;
 		var username = getCookie("username");
-
+		alert(document.cookie);
 		document.getElementById("welcome").innerHTML = username;
 
 		var xmlhttp = new XMLHttpRequest();
-		var url = "http://localhost:8080/users?username=" + username;
+		var url = "http://52.37.240.117:8080/users?username=" + username;
 		//var url = "http://localhost:8080/users/1";
 		xmlhttp.onreadystatechange = function() {
 		    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {

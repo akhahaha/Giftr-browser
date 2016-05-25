@@ -98,7 +98,7 @@
 		 	var msg = "users?username=" + usernameInput + "&password=" + String(passwordInput) + "&email=" + String(emailInput) + "&gender=" + String(gender) + "&interests=" + String(intrestsInput);
 
 		 	var xhttp = new XMLHttpRequest();
-		 	var url = "http://localhost:8080/" + msg;
+		 	var url = "http://ec2-52-37-240-117.us-west-2.compute.amazonaws.com:8080/" + msg;
 		 	xhttp.open("POST", url, true);
 		 	xhttp.send();
 
